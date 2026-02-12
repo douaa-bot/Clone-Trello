@@ -1,0 +1,9 @@
+:root {
+  --toast-bg: #fff;
+  --toast-color: #000;
+}
+
+.dark {
+  --toast-bg: #1f2937;
+  --toast-color: #fff;
+}

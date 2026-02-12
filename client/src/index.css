@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg border border-gray-200 dark:border-gray-700 p-4 transition-all duration-300 backdrop-blur-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-medium px-6 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 shadow-sm;
+  }
+  
+  .column {
+    @apply bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-5 min-h-[600px] flex flex-col shadow-inner border border-gray-200 dark:border-gray-700;
+  }
+  
+  .task-card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl border border-gray-200 dark:border-gray-700 p-4 transition-all duration-300 cursor-grab active:cursor-grabbing transform hover:scale-[1.02];
+  }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* React DatePicker Dark Mode */
+.dark .react-datepicker {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .react-datepicker__header {
+  @apply bg-gray-800 border-gray-700;
+}
+
+.dark .react-datepicker__current-month,
+.dark .react-datepicker__day-name,
+.dark .react-datepicker__day {
+  @apply text-gray-100;
+}
+
+.dark .react-datepicker__day:hover {
+  @apply bg-gray-700;
+}
+
+.dark .react-datepicker__day--selected {
+  @apply bg-primary-600;
+}
+
+.dark .react-datepicker__day--keyboard-selected {
+  @apply bg-primary-700;
+}
